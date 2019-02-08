@@ -1,2 +1,3 @@
-# gbJsTwoCourse
-GeekBrains JavaScript Homeworks
+# GeekBrains JavaScript Homeworks
+## Start project
+Home work #1
