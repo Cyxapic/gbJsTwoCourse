@@ -33,7 +33,7 @@ const products = [{
  * @param {object} product
  * @returns {string} - product template string
  */
-function renderProduct(product) {
+const renderProduct = product => {
     return `<div class="column is-multiline is-one-quarter">
         <div class="card">
             <div class="card-content">
@@ -45,7 +45,8 @@ function renderProduct(product) {
             </div>
         </div>
     </div>`;
-}
+};
+
 /**
  * Function render products template and output in document element
  * @param {array} list - array of products
