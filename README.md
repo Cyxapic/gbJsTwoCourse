@@ -1,3 +1,4 @@
 # GeekBrains JavaScript Homeworks
 ## Start project
-Home work #1
+
+- Home work #1
