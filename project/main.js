@@ -9,7 +9,7 @@ class ProductsList {
         this._getProducts();
     }
     _getCategories() {
-        fetch('http://127.0.0.1:8000/api/v1/categories/').then(
+        fetch('https://dev.cyxapic.ru/api/v1/categories/').then(
             resp => resp.json().then(data => {
                 this.categories = data;
                 this._renderCategory();
@@ -17,7 +17,7 @@ class ProductsList {
         );
     }
     _getProducts() {
-        fetch('http://127.0.0.1:8000/api/v1/products/').then(
+        fetch('https://dev.cyxapic.ru/api/v1/products/').then(
             resp => resp.json().then(data => {
                 this.goods = data;
                 this.renderProducts();
