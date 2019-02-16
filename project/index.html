@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <title>Интернет магазин</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <style>
+        .hide-price{
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body>
     <header class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
+                <a class="navbar-item" href="#main">
                     <img src="static/img/logo.jpg" width="45" height="120">
                 </a>
 
@@ -24,14 +29,19 @@
 
             <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a href="#main" class="navbar-item">
                         Главная
                     </a>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
+                            Категории
+                        </a>
+                        <div id="category" class="navbar-dropdown"></div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
                             Контакты
                         </a>
-
                         <div class="navbar-dropdown">
                             <a class="navbar-item">
                                 О магазине
@@ -46,11 +56,12 @@
 
                 <div class="navbar-end">
                     <div class="navbar-item">
+                        <a class="navbar-item">
+                            Товаров в корзине: <span id="total" class="tag is-success"></span>
+                        </a>
                         <div class="buttons">
-                            <button class="button is-primary" type="button">Козрзина</button>
-                            <button class="button is-light">
-                                Log in
-                            </button>
+                            <a href="#cart" class="button is-primary" type="button">Козрзина</a>
+                            <button class="button is-light">Log in</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +71,8 @@
 
     <section class="section">
         <div class="container">
-            <div id="products" class="columns is-multiline"></div>
+            <h3 id="title" class="title is-3"></h3>
+            <div id="app"></div>
         </div>
     </section>
     <script src="main.js"></script>
